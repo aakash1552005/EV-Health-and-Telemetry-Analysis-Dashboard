@@ -1,0 +1,341 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ev_telemetry_dataset\",\"condition\",\"component\",\"Image Datasets\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "component_to_ev_telemetry",
+        "fromColumn": "Component",
+        "fromTable": "ev_telemetry_dataset",
+        "toColumn": "Component",
+        "toTable": "component"
+      },
+      {
+        "name": "component_to_Image_Datasets",
+        "fromColumn": "Component",
+        "fromTable": "Image Datasets",
+        "toColumn": "Component",
+        "toTable": "component"
+      },
+      {
+        "name": "condition_to_Image_Datasets",
+        "fromColumn": "Component_Condition",
+        "fromTable": "Image Datasets",
+        "toColumn": "Component_Condition",
+        "toTable": "condition"
+      },
+      {
+        "name": "condition_to_ev_telemetry",
+        "fromColumn": "Component_Condition",
+        "fromTable": "ev_telemetry_dataset",
+        "toColumn": "Component_Condition",
+        "toTable": "condition"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "ev_telemetry_dataset",
+        "columns": [
+          {
+            "name": "Vehicle_ID",
+            "dataType": "int64",
+            "lineageTag": "d0082322-c127-44ea-899c-259972b28850",
+            "sourceColumn": "Vehicle_ID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "Vehicle_Model",
+            "dataType": "string",
+            "lineageTag": "ad79ccfb-66b3-48f1-b62d-ab60b6a29772",
+            "sourceColumn": "Vehicle_Model"
+          },
+          {
+            "name": "Fleet_Operator",
+            "dataType": "string",
+            "lineageTag": "aa5007ad-6d0c-46ce-9a56-08520484b079",
+            "sourceColumn": "Fleet_Operator"
+          },
+          {
+            "name": "Component",
+            "dataType": "string",
+            "lineageTag": "e714c20d-0114-479a-ac11-84609a4ee921",
+            "sourceColumn": "Component"
+          },
+          {
+            "name": "Component_Condition",
+            "dataType": "string",
+            "lineageTag": "20e55940-5cb3-460d-8f83-0cab37f3b55c",
+            "sourceColumn": "Component_Condition"
+          },
+          {
+            "name": "Mileage_km",
+            "dataType": "int64",
+            "lineageTag": "c55fb29e-6848-44af-9b95-f35b371b010a",
+            "sourceColumn": "Mileage_km",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "State_of_Health_SoH",
+            "dataType": "double",
+            "lineageTag": "8a9ca527-2abb-4748-aa24-a58426e17803",
+            "sourceColumn": "State_of_Health_SoH",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "State_of_Charge_SoC",
+            "dataType": "double",
+            "lineageTag": "eb8cfbb6-750e-4e6c-a427-61991290e87f",
+            "sourceColumn": "State_of_Charge_SoC",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Core_Temperature_C",
+            "dataType": "double",
+            "lineageTag": "29ddd370-cbde-46fc-b61f-8dfebf6e7fed",
+            "sourceColumn": "Core_Temperature_C",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Energy_Efficiency_Wh_km",
+            "dataType": "double",
+            "lineageTag": "a34ede89-c2a5-4f59-8d86-034ec01f0057",
+            "sourceColumn": "Energy_Efficiency_Wh_km",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Motor_Torque_Nm",
+            "dataType": "double",
+            "lineageTag": "2635f703-ad5a-4a70-82eb-a1b11f28d868",
+            "sourceColumn": "Motor_Torque_Nm",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Fast_Charging_Cycles",
+            "dataType": "int64",
+            "lineageTag": "15d3c64e-e3cb-4fc3-989a-ec098035b1c2",
+            "sourceColumn": "Fast_Charging_Cycles",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Brake_Pad_Wear_Pct",
+            "dataType": "double",
+            "lineageTag": "821ea462-251b-4b11-99fa-104baab6a547",
+            "sourceColumn": "Brake_Pad_Wear_Pct",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Ambient_Temperature_C",
+            "dataType": "double",
+            "lineageTag": "942a1c20-651c-4402-98d6-fac9911071b3",
+            "sourceColumn": "Ambient_Temperature_C",
+            "summarizeBy": "average"
+          },
+          {
+            "name": "Diagnostic_Risk_Tier",
+            "dataType": "string",
+            "lineageTag": "dc0bd8f1-abc0-44a3-bc21-f1b56055b162",
+            "sourceColumn": "Diagnostic_Risk_Tier"
+          },
+          {
+            "name": "Mileage Group",
+            "dataType": "string",
+            "expression": "SWITCH(TRUE(), ev_telemetry_dataset[Mileage_km] <= 35000, \"0\u201335K km\", ev_telemetry_dataset[Mileage_km] <= 75000, \"35K\u201375K km\", ev_telemetry_dataset[Mileage_km] <= 115000, \"75K\u2013115K km\", ev_telemetry_dataset[Mileage_km] <= 150000, \"115K\u2013150K km\", \"150K+ km\")",
+            "isDataTypeInferred": true,
+            "lineageTag": "4fc7137d-3d55-46c6-a024-a85cfdb4035e",
+            "type": "calculated"
+          }
+        ],
+        "lineageTag": "00a7ce03-0711-447b-967d-6a97f3caa724",
+        "measures": [
+          {
+            "name": "vs Avg SoH",
+            "expression": [
+              "VAR _CurrentSoH = AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])",
+              "VAR _OverallSoH = CALCULATE(AVERAGE(ev_telemetry_dataset[State_of_Health_SoH]), ALL(ev_telemetry_dataset))",
+              "VAR _Diff = _CurrentSoH - _OverallSoH",
+              "RETURN",
+              "SWITCH(",
+              "    TRUE(),",
+              "    _Diff > 0, UNICHAR(9650) & \" \" & FORMAT(_CurrentSoH, \"0.0\") & \"%\",",
+              "    _Diff < 0, UNICHAR(9660) & \" \" & FORMAT(_CurrentSoH, \"0.0\") & \"%\",",
+              "    FORMAT(_CurrentSoH, \"0.0\") & \"%\"",
+              ")"
+            ],
+            "lineageTag": "2e116f4c-55ce-454d-9d04-3e57e7a6a285"
+          },
+          {
+            "name": "vs Avg Mileage",
+            "expression": [
+              "VAR _CurrentMileage = AVERAGE(ev_telemetry_dataset[Mileage_km])",
+              "VAR _OverallMileage = CALCULATE(AVERAGE(ev_telemetry_dataset[Mileage_km]), ALL(ev_telemetry_dataset))",
+              "VAR _Diff = _CurrentMileage - _OverallMileage",
+              "RETURN",
+              "SWITCH(",
+              "    TRUE(),",
+              "    _Diff > 0, UNICHAR(9650) & \" \" & FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\",",
+              "    _Diff < 0, UNICHAR(9660) & \" \" & FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\",",
+              "    FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\"",
+              ")"
+            ],
+            "lineageTag": "2531e14b-5cda-44e7-bcc2-405c7dd66f64"
+          },
+          {
+            "name": "Total Vehicles",
+            "expression": "COUNTROWS(ev_telemetry_dataset)",
+            "lineageTag": "0edd0dbb-4bfc-4c4a-9c31-5864c0f9f5d7"
+          },
+          {
+            "name": "Avg SoH",
+            "expression": "AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])",
+            "lineageTag": "236f14b6-b94c-45d7-a9a2-f7f45ef83281"
+          },
+          {
+            "name": "Avg Core Temp",
+            "expression": "AVERAGE(ev_telemetry_dataset[Core_Temperature_C])",
+            "lineageTag": "b4cae975-0b84-40c9-b3d2-8a9f1349d3ce"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ev_telemetry_dataset",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\AAKASH.S.S\\OneDrive\\Desktop\\EV Health and Telemetry Analysis Dashboard\\\\ev_telemetry_dataset.csv\"),[Delimiter=\",\", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Vehicle_ID\", Int64.Type}, {\"Vehicle_Model\", type text}, {\"Fleet_Operator\", type text}, {\"Component\", type text}, {\"Component_Condition\", type text}, {\"Mileage_km\", Int64.Type}, {\"State_of_Health_SoH\", type number}, {\"State_of_Charge_SoC\", type number}, {\"Core_Temperature_C\", type number}, {\"Energy_Efficiency_Wh_km\", type number}, {\"Motor_Torque_Nm\", type number}, {\"Fast_Charging_Cycles\", Int64.Type}, {\"Brake_Pad_Wear_Pct\", type number}, {\"Ambient_Temperature_C\", type number}, {\"Diagnostic_Risk_Tier\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "condition",
+        "columns": [
+          {
+            "name": "Component_Condition",
+            "dataType": "string",
+            "lineageTag": "0d47ee2f-4277-4c0c-86b3-c9de4915e2ff",
+            "sourceColumn": "Component_Condition"
+          }
+        ],
+        "lineageTag": "0995bd76-45ef-423b-849a-87c2f636a791",
+        "partitions": [
+          {
+            "name": "condition",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\AAKASH.S.S\\OneDrive\\Desktop\\EV Health and Telemetry Analysis Dashboard\\\\condition.csv\"),[Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Component_Condition\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "component",
+        "columns": [
+          {
+            "name": "Component",
+            "dataType": "string",
+            "lineageTag": "7e3ec99d-1029-410e-87d6-a503942eb4ce",
+            "sourceColumn": "Component"
+          },
+          {
+            "name": "Icon_URL",
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "9f1b46d3-598c-44d4-85ea-8cb8292f1f45",
+            "sourceColumn": "Icon_URL"
+          }
+        ],
+        "lineageTag": "978ccffb-40e8-498a-9fe0-09685e9af074",
+        "partitions": [
+          {
+            "name": "component",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\AAKASH.S.S\\OneDrive\\Desktop\\EV Health and Telemetry Analysis Dashboard\\\\component.csv\"),[Delimiter=\",\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Component\", type text}, {\"Icon_URL\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Image Datasets",
+        "columns": [
+          {
+            "name": "Component",
+            "dataType": "string",
+            "lineageTag": "4d5f5826-96fa-4a38-a6e1-ac86d9eccb58",
+            "sourceColumn": "Component"
+          },
+          {
+            "name": "Component_Condition",
+            "dataType": "string",
+            "lineageTag": "3040bd02-5954-435e-b911-f4f67aafcbac",
+            "sourceColumn": "Component_Condition"
+          },
+          {
+            "name": "Image URL",
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "eaaf684d-3456-4b99-b344-05c19df64f11",
+            "sourceColumn": "Image URL"
+          }
+        ],
+        "lineageTag": "4f6f244b-030a-438d-9af8-a22823b23f23",
+        "partitions": [
+          {
+            "name": "Image Datasets",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\AAKASH.S.S\\OneDrive\\Desktop\\EV Health and Telemetry Analysis Dashboard\\\\Image Datasets.csv\"),[Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Component\", type text}, {\"Component_Condition\", type text}, {\"Image URL\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

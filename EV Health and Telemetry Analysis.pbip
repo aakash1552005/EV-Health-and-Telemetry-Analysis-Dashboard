@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "EV Health and Telemetry Analysis.Report"
+      }
+    }
+  ],
+  "settings": {}
+}
