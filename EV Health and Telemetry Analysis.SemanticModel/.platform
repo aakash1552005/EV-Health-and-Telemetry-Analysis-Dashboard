@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "EV Health and Telemetry Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2491f447-4f01-4c2b-8052-e1ff8bd0acf3"
+  }
+}

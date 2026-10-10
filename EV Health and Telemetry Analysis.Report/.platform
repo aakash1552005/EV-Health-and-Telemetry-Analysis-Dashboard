@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "EV Health and Telemetry Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "926e8f03-d99a-4dc6-927f-536cb4304161"
+  }
+}
