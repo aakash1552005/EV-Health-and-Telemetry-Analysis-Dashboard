@@ -1,0 +1,11 @@
+Component,Component_Condition,Image URL
+EV Chassis,Optimal,images/chassis_optimal.jpg
+EV Chassis,Degraded,images/chassis_degraded.jpg
+Battery Pack,Optimal,images/battery_optimal.jpg
+Battery Pack,Degraded,images/battery_degraded.jpg
+Electric Motor,Optimal,images/motor_optimal.jpg
+Electric Motor,Degraded,images/motor_degraded.jpg
+Regenerative Brakes,Optimal,images/brakes_optimal.jpg
+Regenerative Brakes,Degraded,images/brakes_degraded.jpg
+Thermal Cooling,Optimal,images/cooling_optimal.jpg
+Thermal Cooling,Degraded,images/cooling_degraded.jpg

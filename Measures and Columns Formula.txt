@@ -1,0 +1,59 @@
+Measures and Columns Formula for EV Health & Telemetry Analysis Dashboard
+
+1. Calculated Column: Mileage Group
+Mileage Group = 
+SWITCH(
+    TRUE(),
+    ev_telemetry_dataset[Mileage_km] <= 35000, "0–35K km",
+    ev_telemetry_dataset[Mileage_km] <= 75000, "35K–75K km",
+    ev_telemetry_dataset[Mileage_km] <= 115000, "75K–115K km",
+    ev_telemetry_dataset[Mileage_km] <= 150000, "115K–150K km",
+    "150K+ km"
+)
+
+2. Measure: vs Avg SoH (Dynamic Variance Indicator)
+vs Avg SoH = 
+VAR _CurrentSoH = AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])
+VAR _OverallSoH = CALCULATE(AVERAGE(ev_telemetry_dataset[State_of_Health_SoH]), ALL(ev_telemetry_dataset))
+VAR _Diff = _CurrentSoH - _OverallSoH
+
+RETURN
+SWITCH(
+    TRUE(),
+    _Diff > 0, UNICHAR(9650) & " " & FORMAT(_CurrentSoH, "0.0") & "%",
+    _Diff < 0, UNICHAR(9660) & " " & FORMAT(_CurrentSoH, "0.0") & "%",
+    FORMAT(_CurrentSoH, "0.0") & "%"
+)
+
+3. Measure: vs Avg Mileage (Dynamic Variance Indicator)
+vs Avg Mileage = 
+VAR _CurrentMileage = AVERAGE(ev_telemetry_dataset[Mileage_km])
+VAR _OverallMileage = CALCULATE(AVERAGE(ev_telemetry_dataset[Mileage_km]), ALL(ev_telemetry_dataset))
+VAR _Diff = _CurrentMileage - _OverallMileage
+
+RETURN
+SWITCH(
+    TRUE(),
+    _Diff > 0, UNICHAR(9650) & " " & FORMAT(_CurrentMileage / 1000, "0.0") & "K",
+    _Diff < 0, UNICHAR(9660) & " " & FORMAT(_CurrentMileage / 1000, "0.0") & "K",
+    FORMAT(_CurrentMileage / 1000, "0.0") & "K"
+)
+
+4. Measure: Selected Component Image (Dynamic 3D Visual Binding)
+Selected Component Image = 
+CALCULATE(
+    SELECTEDVALUE('Image Datasets'[Image URL]),
+    TREATAS(VALUES(component[Component]), 'Image Datasets'[Component]),
+    TREATAS(VALUES(condition[Component_Condition]), 'Image Datasets'[Component_Condition])
+)
+
+5. Measure: Total Fleet Vehicles
+Total Vehicles = COUNTROWS(ev_telemetry_dataset)
+
+6. Measure: Critical Risk Ratio %
+Critical Risk Ratio = 
+DIVIDE(
+    CALCULATE(COUNTROWS(ev_telemetry_dataset), ev_telemetry_dataset[Diagnostic_Risk_Tier] = "Critical"),
+    COUNTROWS(ev_telemetry_dataset),
+    0
+)
