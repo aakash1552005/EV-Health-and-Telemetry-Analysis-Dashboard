@@ -60,40 +60,40 @@
           "config": "{\"name\": \"ConditionSlicer\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 955, \"y\": 24, \"z\": 1000, \"width\": 270, \"height\": 45, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"condition.Component_Condition\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"condition\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Component_Condition\"}, \"Name\": \"condition.Component_Condition\"}]}, \"objects\": {\"general\": [{\"properties\": {\"orientation\": {\"expr\": {\"Literal\": {\"Value\": \"1D\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
         },
         {
-          "x": 50.0,
-          "y": 92.0,
-          "width": 260.0,
-          "height": 72.0,
-          "z": 2000.0,
-          "filters": "[]",
-          "config": "{\"name\": \"KpiTotalFleet\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 50, \"y\": 92, \"z\": 2000, \"width\": 260, \"height\": 72, \"tabOrder\": 2000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Total Vehicles\"}, \"Name\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
-        },
-        {
-          "x": 350.0,
-          "y": 92.0,
-          "width": 260.0,
-          "height": 72.0,
-          "z": 2000.0,
-          "filters": "[]",
-          "config": "{\"name\": \"KpiBatterySoH\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 350, \"y\": 92, \"z\": 2000, \"width\": 260, \"height\": 72, \"tabOrder\": 3000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"vs Avg SoH\"}, \"Name\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
-        },
-        {
-          "x": 650.0,
-          "y": 92.0,
-          "width": 260.0,
-          "height": 72.0,
-          "z": 2000.0,
-          "filters": "[]",
-          "config": "{\"name\": \"KpiEfficiency\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 650, \"y\": 92, \"z\": 2000, \"width\": 260, \"height\": 72, \"tabOrder\": 4000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Avg Efficiency\"}, \"Name\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
-        },
-        {
-          "x": 950.0,
+          "x": 45.0,
           "y": 92.0,
           "width": 280.0,
           "height": 72.0,
           "z": 2000.0,
           "filters": "[]",
-          "config": "{\"name\": \"KpiCriticalAlerts\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 950, \"y\": 92, \"z\": 2000, \"width\": 280, \"height\": 72, \"tabOrder\": 5000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Critical Alerts\"}, \"Name\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "config": "{\"name\": \"KpiTotalFleet\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 45.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 2000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Total Vehicles\"}, \"Name\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+        },
+        {
+          "x": 345.0,
+          "y": 92.0,
+          "width": 280.0,
+          "height": 72.0,
+          "z": 2000.0,
+          "filters": "[]",
+          "config": "{\"name\": \"KpiBatterySoH\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 345.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 3000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"vs Avg SoH\"}, \"Name\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+        },
+        {
+          "x": 645.0,
+          "y": 92.0,
+          "width": 280.0,
+          "height": 72.0,
+          "z": 2000.0,
+          "filters": "[]",
+          "config": "{\"name\": \"KpiEfficiency\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 4000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Avg Efficiency\"}, \"Name\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+        },
+        {
+          "x": 945.0,
+          "y": 92.0,
+          "width": 290.0,
+          "height": 72.0,
+          "z": 2000.0,
+          "filters": "[]",
+          "config": "{\"name\": \"KpiCriticalAlerts\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 945.0, \"y\": 92, \"z\": 2000, \"width\": 290.0, \"height\": 72, \"tabOrder\": 5000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Critical Alerts\"}, \"Name\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
         },
         {
           "x": 50.0,

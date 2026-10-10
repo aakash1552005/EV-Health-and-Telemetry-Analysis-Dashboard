@@ -196,7 +196,7 @@
           },
           {
             "name": "Critical Alerts",
-            "expression": "CALCULATE(COUNTROWS(ev_telemetry_dataset), ev_telemetry_dataset[Diagnostic_Risk_Tier] = \"Critical\")",
+            "expression": "COALESCE(CALCULATE(COUNTROWS(ev_telemetry_dataset), ev_telemetry_dataset[Diagnostic_Risk_Tier] = \"Critical\"), 0)",
             "lineageTag": "4efe448f-c4b7-4b26-9156-7344f78f40fb"
           },
           {
