@@ -55,101 +55,101 @@
           {
             "name": "Vehicle_ID",
             "dataType": "int64",
-            "lineageTag": "d0082322-c127-44ea-899c-259972b28850",
+            "lineageTag": "a10f6cfc-8c54-43bd-b586-ace42456a421",
             "sourceColumn": "Vehicle_ID",
             "summarizeBy": "count"
           },
           {
             "name": "Vehicle_Model",
             "dataType": "string",
-            "lineageTag": "ad79ccfb-66b3-48f1-b62d-ab60b6a29772",
+            "lineageTag": "bd3d2301-0c43-4fdc-a506-f20c44f76023",
             "sourceColumn": "Vehicle_Model"
           },
           {
             "name": "Fleet_Operator",
             "dataType": "string",
-            "lineageTag": "aa5007ad-6d0c-46ce-9a56-08520484b079",
+            "lineageTag": "804ae2b1-8267-4cd5-9dba-396d8afc3d98",
             "sourceColumn": "Fleet_Operator"
           },
           {
             "name": "Component",
             "dataType": "string",
-            "lineageTag": "e714c20d-0114-479a-ac11-84609a4ee921",
+            "lineageTag": "63f40c18-437a-4772-a5a6-b6300a57622b",
             "sourceColumn": "Component"
           },
           {
             "name": "Component_Condition",
             "dataType": "string",
-            "lineageTag": "20e55940-5cb3-460d-8f83-0cab37f3b55c",
+            "lineageTag": "a21a56d6-5ee0-4f18-9839-d3ccfe2bcca1",
             "sourceColumn": "Component_Condition"
           },
           {
             "name": "Mileage_km",
             "dataType": "int64",
-            "lineageTag": "c55fb29e-6848-44af-9b95-f35b371b010a",
+            "lineageTag": "f9445da3-05d1-4d54-a628-1f23949e14ba",
             "sourceColumn": "Mileage_km",
             "summarizeBy": "average"
           },
           {
             "name": "State_of_Health_SoH",
             "dataType": "double",
-            "lineageTag": "8a9ca527-2abb-4748-aa24-a58426e17803",
+            "lineageTag": "878a3cba-1440-4d9a-b06c-ca2fd5348998",
             "sourceColumn": "State_of_Health_SoH",
             "summarizeBy": "average"
           },
           {
             "name": "State_of_Charge_SoC",
             "dataType": "double",
-            "lineageTag": "eb8cfbb6-750e-4e6c-a427-61991290e87f",
+            "lineageTag": "1994e9cd-cbef-447a-b25c-4ea7c54c9f47",
             "sourceColumn": "State_of_Charge_SoC",
             "summarizeBy": "average"
           },
           {
             "name": "Core_Temperature_C",
             "dataType": "double",
-            "lineageTag": "29ddd370-cbde-46fc-b61f-8dfebf6e7fed",
+            "lineageTag": "1aeaee82-af45-4581-ad1b-f33bed526885",
             "sourceColumn": "Core_Temperature_C",
             "summarizeBy": "average"
           },
           {
             "name": "Energy_Efficiency_Wh_km",
             "dataType": "double",
-            "lineageTag": "a34ede89-c2a5-4f59-8d86-034ec01f0057",
+            "lineageTag": "50fadf9e-b219-4b52-bc1f-f9acf58b2f9d",
             "sourceColumn": "Energy_Efficiency_Wh_km",
             "summarizeBy": "average"
           },
           {
             "name": "Motor_Torque_Nm",
             "dataType": "double",
-            "lineageTag": "2635f703-ad5a-4a70-82eb-a1b11f28d868",
+            "lineageTag": "3ff992b4-1ef9-4807-b22d-28f260ed44d7",
             "sourceColumn": "Motor_Torque_Nm",
             "summarizeBy": "average"
           },
           {
             "name": "Fast_Charging_Cycles",
             "dataType": "int64",
-            "lineageTag": "15d3c64e-e3cb-4fc3-989a-ec098035b1c2",
+            "lineageTag": "0efa9016-33cf-4401-9850-23efc0ea2681",
             "sourceColumn": "Fast_Charging_Cycles",
             "summarizeBy": "average"
           },
           {
             "name": "Brake_Pad_Wear_Pct",
             "dataType": "double",
-            "lineageTag": "821ea462-251b-4b11-99fa-104baab6a547",
+            "lineageTag": "e911043f-2776-47b1-8797-0c5cb3e1f650",
             "sourceColumn": "Brake_Pad_Wear_Pct",
             "summarizeBy": "average"
           },
           {
             "name": "Ambient_Temperature_C",
             "dataType": "double",
-            "lineageTag": "942a1c20-651c-4402-98d6-fac9911071b3",
+            "lineageTag": "c702e144-020c-4f26-be90-c1f0a8afac92",
             "sourceColumn": "Ambient_Temperature_C",
             "summarizeBy": "average"
           },
           {
             "name": "Diagnostic_Risk_Tier",
             "dataType": "string",
-            "lineageTag": "dc0bd8f1-abc0-44a3-bc21-f1b56055b162",
+            "lineageTag": "d09aaf7a-b059-4828-916e-aae6948e1e2d",
             "sourceColumn": "Diagnostic_Risk_Tier"
           },
           {
@@ -157,12 +157,22 @@
             "dataType": "string",
             "expression": "SWITCH(TRUE(), ev_telemetry_dataset[Mileage_km] <= 35000, \"0\u201335K km\", ev_telemetry_dataset[Mileage_km] <= 75000, \"35K\u201375K km\", ev_telemetry_dataset[Mileage_km] <= 115000, \"75K\u2013115K km\", ev_telemetry_dataset[Mileage_km] <= 150000, \"115K\u2013150K km\", \"150K+ km\")",
             "isDataTypeInferred": true,
-            "lineageTag": "4fc7137d-3d55-46c6-a024-a85cfdb4035e",
+            "lineageTag": "ecf85b0d-1d5d-476d-85c8-131dee9b5cea",
             "type": "calculated"
           }
         ],
-        "lineageTag": "00a7ce03-0711-447b-967d-6a97f3caa724",
+        "lineageTag": "6903259e-f0cc-49bb-b3ed-66c8e5b721a0",
         "measures": [
+          {
+            "name": "Total Vehicles",
+            "expression": "COUNTROWS(ev_telemetry_dataset)",
+            "lineageTag": "06ab3cb3-86cb-4945-ae7e-22f5464d2087"
+          },
+          {
+            "name": "Avg SoH",
+            "expression": "AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])",
+            "lineageTag": "114f84ad-a83e-4746-820a-b957208e81e9"
+          },
           {
             "name": "vs Avg SoH",
             "expression": [
@@ -177,38 +187,27 @@
               "    FORMAT(_CurrentSoH, \"0.0\") & \"%\"",
               ")"
             ],
-            "lineageTag": "2e116f4c-55ce-454d-9d04-3e57e7a6a285"
+            "lineageTag": "9463c0c2-7018-4d2c-b3ea-08a28f1df140"
           },
           {
-            "name": "vs Avg Mileage",
-            "expression": [
-              "VAR _CurrentMileage = AVERAGE(ev_telemetry_dataset[Mileage_km])",
-              "VAR _OverallMileage = CALCULATE(AVERAGE(ev_telemetry_dataset[Mileage_km]), ALL(ev_telemetry_dataset))",
-              "VAR _Diff = _CurrentMileage - _OverallMileage",
-              "RETURN",
-              "SWITCH(",
-              "    TRUE(),",
-              "    _Diff > 0, UNICHAR(9650) & \" \" & FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\",",
-              "    _Diff < 0, UNICHAR(9660) & \" \" & FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\",",
-              "    FORMAT(_CurrentMileage / 1000, \"0.0\") & \"K\"",
-              ")"
-            ],
-            "lineageTag": "2531e14b-5cda-44e7-bcc2-405c7dd66f64"
+            "name": "Avg Efficiency",
+            "expression": "FORMAT(AVERAGE(ev_telemetry_dataset[Energy_Efficiency_Wh_km]), \"0\") & \" Wh/km\"",
+            "lineageTag": "258f6754-9b10-462c-88c3-b2b73f73ea7e"
           },
           {
-            "name": "Total Vehicles",
-            "expression": "COUNTROWS(ev_telemetry_dataset)",
-            "lineageTag": "0edd0dbb-4bfc-4c4a-9c31-5864c0f9f5d7"
+            "name": "Critical Alerts",
+            "expression": "CALCULATE(COUNTROWS(ev_telemetry_dataset), ev_telemetry_dataset[Diagnostic_Risk_Tier] = \"Critical\")",
+            "lineageTag": "4efe448f-c4b7-4b26-9156-7344f78f40fb"
           },
           {
-            "name": "Avg SoH",
-            "expression": "AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])",
-            "lineageTag": "236f14b6-b94c-45d7-a9a2-f7f45ef83281"
+            "name": "Avg Torque",
+            "expression": "AVERAGE(ev_telemetry_dataset[Motor_Torque_Nm])",
+            "lineageTag": "7c9aedf7-4ceb-4b42-a6d9-0864dc36ac34"
           },
           {
             "name": "Avg Core Temp",
             "expression": "AVERAGE(ev_telemetry_dataset[Core_Temperature_C])",
-            "lineageTag": "b4cae975-0b84-40c9-b3d2-8a9f1349d3ce"
+            "lineageTag": "4143d0a7-2897-4799-9531-a6909323ca45"
           }
         ],
         "partitions": [
@@ -235,11 +234,11 @@
           {
             "name": "Component_Condition",
             "dataType": "string",
-            "lineageTag": "0d47ee2f-4277-4c0c-86b3-c9de4915e2ff",
+            "lineageTag": "e6b4d8ff-296e-49eb-856e-b7a85b7dc406",
             "sourceColumn": "Component_Condition"
           }
         ],
-        "lineageTag": "0995bd76-45ef-423b-849a-87c2f636a791",
+        "lineageTag": "540ddead-d357-4e6f-b60a-084044737a42",
         "partitions": [
           {
             "name": "condition",
@@ -264,18 +263,18 @@
           {
             "name": "Component",
             "dataType": "string",
-            "lineageTag": "7e3ec99d-1029-410e-87d6-a503942eb4ce",
+            "lineageTag": "ede31090-d0c5-44c5-afb4-d7a77a7fa9c1",
             "sourceColumn": "Component"
           },
           {
             "name": "Icon_URL",
             "dataCategory": "ImageUrl",
             "dataType": "string",
-            "lineageTag": "9f1b46d3-598c-44d4-85ea-8cb8292f1f45",
+            "lineageTag": "feb3b2cf-3f45-424d-8b0b-ef73f6093de7",
             "sourceColumn": "Icon_URL"
           }
         ],
-        "lineageTag": "978ccffb-40e8-498a-9fe0-09685e9af074",
+        "lineageTag": "daaea29b-76cc-4550-bdda-bb6b49df8851",
         "partitions": [
           {
             "name": "component",
@@ -300,24 +299,24 @@
           {
             "name": "Component",
             "dataType": "string",
-            "lineageTag": "4d5f5826-96fa-4a38-a6e1-ac86d9eccb58",
+            "lineageTag": "32b1d1df-3c4e-44e7-a5b6-cf71af736ec9",
             "sourceColumn": "Component"
           },
           {
             "name": "Component_Condition",
             "dataType": "string",
-            "lineageTag": "3040bd02-5954-435e-b911-f4f67aafcbac",
+            "lineageTag": "cbe320da-4751-4086-906b-5094d9ae7fcb",
             "sourceColumn": "Component_Condition"
           },
           {
             "name": "Image URL",
             "dataCategory": "ImageUrl",
             "dataType": "string",
-            "lineageTag": "eaaf684d-3456-4b99-b344-05c19df64f11",
+            "lineageTag": "a15d3e82-3f25-4d13-82ea-ed15755c914b",
             "sourceColumn": "Image URL"
           }
         ],
-        "lineageTag": "4f6f244b-030a-438d-9af8-a22823b23f23",
+        "lineageTag": "b0733c3b-7da2-4c70-b952-6a3a4ff1a225",
         "partitions": [
           {
             "name": "Image Datasets",
