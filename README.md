@@ -1,25 +1,25 @@
-# ⚡ Electric Vehicle (EV) Telemetry & Battery Health 3D Analysis Dashboard
+# ⚡ Electric Vehicle (EV) Telemetry & Powertrain Health 3D Analysis Dashboard
 
 <div align="center">
 
-[![Power BI](https://img.shields.io/badge/Power_BI-Desktop_Project-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Power BI](https://img.shields.io/badge/Power_BI-Desktop_Project_(PBIP)-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
 [![DAX](https://img.shields.io/badge/DAX-Calculated_Measures-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://learn.microsoft.com/en-us/dax/)
-[![Power Query](https://img.shields.io/badge/Power_Query-M_Code-2BA143?style=for-the-badge&logo=powerbi&logoColor=white)](https://learn.microsoft.com/en-us/power-query/)
-[![Dataset](https://img.shields.io/badge/Fleet_Cohort-2%2C500_Vehicles-blue?style=for-the-badge&logo=database&logoColor=white)](#-dataset-schema--data-dictionary)
+[![Data Modeling](https://img.shields.io/badge/Data_Model-Star_Schema-2BA143?style=for-the-badge&logo=database&logoColor=white)](#-data-architecture--relational-model)
+[![Fleet Cohort](https://img.shields.io/badge/Fleet_Cohort-2%2C500_Vehicles-blue?style=for-the-badge&logo=speedtest&logoColor=white)](#-dataset-schema--data-dictionary)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
 
 <br/>
 
 **An executive-grade Fleet Telemetry & Predictive Maintenance Business Intelligence Dashboard developed in Microsoft Power BI Desktop.**  
-*Analyzing high-voltage battery degradation, thermal stress, regenerative braking wear, and motor torque profiles across 2,500 electric vehicle fleet units with dynamic 3D component visualization.*
+*Analyzing high-voltage battery degradation, thermal overload, regenerative braking wear, and motor torque profiles across 2,500 commercial electric vehicles with dynamic 3D digital twin visualization.*
 
 <br/>
 
-![EV Telemetry Dashboard Layout](Background%20Viz.png)
+[![EV Telemetry & Powertrain Health Dashboard Preview](dashboard_preview.png)](dashboard_preview.png)
 
 <br/>
 
-[Executive Summary](#-executive-summary) • [3D Visual Features](#-interactive-3d-component-visualization) • [Data Architecture](#-data-architecture--relational-model) • [DAX Formulas](#-dax-formulas--business-logic) • [Setup Guide](#-setup--exploration-guide)
+[Executive Summary](#-executive-summary) • [Key Dashboard Features](#-key-dashboard-features) • [Interactive 3D Visuals](#-interactive-3d-digital-twins) • [Data Architecture](#-data-architecture--relational-model) • [DAX Formulas](#-dax-formulas--business-logic) • [Setup Guide](#-setup--exploration-guide)
 
 ---
 
@@ -29,27 +29,55 @@
 
 As commercial and passenger electric vehicle fleets scale globally, managing battery lifecycle health, thermal safety, and drivetrain degradation is paramount to avoiding catastrophic field failures and optimizing total cost of ownership (TCO).
 
-This dashboard provides fleet operators, reliability engineers, and automotive data scientists with a centralized command center. Synthesizing real-time telemetry from **2,500 active fleet vehicles**, the solution evaluates high-voltage **Battery State of Health (SoH %)**, **Fast-Charging Stress Cycles**, **Core Operating Temperatures**, and **Regenerative Braking Wear** across five core powertrain subsystems.
+This dashboard provides fleet directors, reliability engineers, and automotive data analysts with a centralized telemetry intelligence center. Synthesizing sensor diagnostics from **2,500 active fleet vehicles**, the system evaluates:
+- **High-Voltage Battery State of Health (SoH %)** and fast-charging degradation curves.
+- **Energy Efficiency Consumption Rates (Wh/km)** against environmental operating conditions.
+- **Subsystem Thermal Profiles (°C)** across vehicle mileage accumulation bands.
+- **Motor Peak Output Torque (Nm)** distribution across high-performance and utility vehicle platforms.
+- **Diagnostic Risk Classification (Low, Moderate, Critical)** across major logistics fleet operators.
 
 ---
 
-## 🏎️ Interactive 3D Component Visualization
+## 🚀 Key Dashboard Features
 
-The dashboard implements dynamic image URL binding connecting dimensional slicers to high-resolution 3D engineering renders of core vehicle subsystems across **Optimal** and **Degraded** operating states:
+1. **Dynamic 3D Component Digital Twins:**
+   - Real-time dimensional image binding dynamically switches high-resolution 3D engineering renders of core vehicle subsystems.
+   - Seamlessly toggle between **Optimal** (healthy / in-spec) and **Degraded** (thermal overload / mechanical wear) operating states with **100% matched camera perspective and framing**.
+   - Clean solid white background (`#FFFFFF`) designed to float seamlessly inside the report visual card.
+
+2. **Executive Metric Cards (Top KPI Ribbon):**
+   - **Fleet Vehicle Cohort Count**: Real-time count of active units matching slicer filters.
+   - **vs. Fleet Avg SoH %**: Dynamic directional variance tracking (`▲` outperforming / `▼` lagging) compared to fleet-wide baseline.
+   - **Fleet Energy Efficiency**: Live consumption rate (`Wh/km`) calibrated to fit cleanly inside visual boundaries without truncation.
+   - **Critical Diagnostic Alerts**: Instant identification of vehicles flagged for immediate depot service.
+
+3. **Multi-Subsystem Telemetry Analysis:**
+   - **Horizontal Component Selector**: Dedicated ribbon to switch focus between Battery Pack, Electric Motor, EV Chassis, Regenerative Brakes, and Thermal Cooling.
+   - **Average Torque by Vehicle Model**: Comparative horizontal bar chart highlighting top-performing platforms (e.g., *Cyber-Veloce*, *Apex GT*).
+   - **Average Core Temperature by Mileage Group**: Multi-stage lifecycle trend line identifying thermal spikes in high-mileage brackets.
+   - **Risk Tier Distribution by Fleet Operator**: 100% stacked column chart breaking down maintenance risk profiles across commercial fleet accounts (*Apex-Logistics*, *Eco-Riders*, *Metro-Mobility*, *Urban-Transit*).
+
+---
+
+## 🏎️ Interactive 3D Digital Twins
+
+The dashboard binds dimensional selections in Power BI to high-fidelity 3D powertrain subsystem models:
 
 | Component | Optimal State (Healthy / In-Spec) | Degraded State (Thermal Runaway / Mechanical Wear) |
 | :--- | :--- | :--- |
-| **EV Chassis** | Carbon-fiber & titanium skateboard chassis frame with active telemetry lines | Structural fatigue fractures, warped cross-members, overheated hubs |
 | **Battery Pack** | High-voltage Li-ion pack with pristine cylindrical cells and cool cyan LEDs | Thermal runaway cell swelling, burnt busbars, scorched module casing |
-| **Electric Motor** | Permanent-magnet drive unit with pristine copper windings and inverter | Stator overheating discoloration, melted insulation, friction burnout |
-| **Regenerative Brakes** | Carbon-ceramic slotted rotor with high-performance cyan multi-piston caliper | Thermal stress cracks, heat-warped rotor disc, grooved glazed surfaces |
-| **Thermal Cooling** | Liquid chiller unit with active fluid flow and clean aluminum radiator fins | Ruptured hoses, boiling coolant leakage, corroded radiator fins |
+| **EV Chassis** | Carbon-fiber & titanium skateboard chassis frame with active telemetry lines | Central battery bay thermal overload glow, structural stress points |
+| **Electric Motor** | Permanent-magnet drive unit with pristine copper windings and inverter | Stator core overheating discoloration, thermal arc glow, coil overload |
+| **Regenerative Brakes** | Carbon-ceramic slotted rotor with high-performance cyan multi-piston caliper | Friction-induced cherry-red thermal glow, rotor disc glazing, pad fade |
+| **Thermal Cooling** | Liquid chiller unit with active fluid flow and clean aluminum radiator fins | Radiator core heat map overload, boiling coolant fluid channels |
+
+> **Design Precision:** Both Optimal and Degraded states for every subsystem share identical 3D camera angles and bounding coordinates, ensuring smooth, non-disruptive visual transitions when toggling operational health states.
 
 ---
 
 ## 🏗️ Data Architecture & Relational Model
 
-The analytical model follows a performant Star Schema optimized for bidirectional cross-filtering and real-time slice-and-dice telemetry exploration.
+The analytical model follows a performant **Star Schema** with bidirectional cross-filtering and real-time slice-and-dice telemetry exploration.
 
 ```mermaid
 erDiagram
@@ -94,9 +122,9 @@ erDiagram
 
 ### 🔗 Relationship Cardinality
 - `component[Component]` **1** ─── **\*** `ev_telemetry_dataset[Component]`
-- `component[Component]` **1** ─── **\*** `Image Datasets[Component]`
+- `component[Component]` **1** ─── **\*** `'Image Datasets'[Component]`
 - `condition[Component_Condition]` **1** ─── **\*** `ev_telemetry_dataset[Component_Condition]`
-- `condition[Component_Condition]` **1** ─── **\*** `Image Datasets[Component_Condition]`
+- `condition[Component_Condition]` **1** ─── **\*** `'Image Datasets'[Component_Condition]`
 
 ---
 
@@ -109,7 +137,7 @@ The primary dataset (`ev_telemetry_dataset.csv`) tracks **2,500 active fleet veh
 | `Vehicle_ID` | Integer | Unique identifier for each fleet unit | `1` to `2500` |
 | `Vehicle_Model` | String | Commercial EV vehicle platform model | `Apex GT`, `Cyber-Veloce`, `Pulse-EV`, `Aero-Cruiser`, `Hyper-Volt` |
 | `Fleet_Operator` | String | Fleet logistics management operator | `Metro-Mobility`, `Apex-Logistics`, `Eco-Riders`, `Urban-Transit` |
-| `Component` | String | Monitored powertrain subsystem | `EV Chassis`, `Battery Pack`, `Electric Motor`, `Regenerative Brakes`, `Thermal Cooling` |
+| `Component` | String | Monitored powertrain subsystem | `Battery Pack`, `Electric Motor`, `EV Chassis`, `Regenerative Brakes`, `Thermal Cooling` |
 | `Component_Condition`| String | Real-time diagnostic condition status | `Optimal`, `Degraded` |
 | `Mileage_km` | Integer | Total accumulated vehicle odometer distance | `5,000` to `185,000` km |
 | `State_of_Health_SoH`| Decimal | High-voltage battery pack retention health % | `66.0%` to `100.0%` |
@@ -126,20 +154,7 @@ The primary dataset (`ev_telemetry_dataset.csv`) tracks **2,500 active fleet veh
 
 ## 🧮 DAX Formulas & Business Logic
 
-### 1. Calculated Column: Mileage Lifecycle Cohort
-```dax
-Mileage Group = 
-SWITCH(
-    TRUE(),
-    ev_telemetry_dataset[Mileage_km] <= 35000, "0–35K km",
-    ev_telemetry_dataset[Mileage_km] <= 75000, "35K–75K km",
-    ev_telemetry_dataset[Mileage_km] <= 115000, "75K–115K km",
-    ev_telemetry_dataset[Mileage_km] <= 150000, "115K–150K km",
-    "150K+ km"
-)
-```
-
-### 2. Measure: Dynamic Battery SoH Variance Indicator
+### 1. Dynamic Battery SoH Variance Indicator
 ```dax
 vs Avg SoH = 
 VAR _CurrentSoH = AVERAGE(ev_telemetry_dataset[State_of_Health_SoH])
@@ -155,29 +170,41 @@ SWITCH(
 )
 ```
 
-### 3. Measure: Dynamic Mileage Baseline Indicator
+### 2. Fleet Energy Consumption Efficiency
 ```dax
-vs Avg Mileage = 
-VAR _CurrentMileage = AVERAGE(ev_telemetry_dataset[Mileage_km])
-VAR _OverallMileage = CALCULATE(AVERAGE(ev_telemetry_dataset[Mileage_km]), ALL(ev_telemetry_dataset))
-VAR _Diff = _CurrentMileage - _OverallMileage
+Avg Efficiency = 
+FORMAT(AVERAGE(ev_telemetry_dataset[Energy_Efficiency_Wh_km]), "0") & " Wh/km"
+```
 
-RETURN
-SWITCH(
-    TRUE(),
-    _Diff > 0, UNICHAR(9650) & " " & FORMAT(_CurrentMileage / 1000, "0.0") & "K",
-    _Diff < 0, UNICHAR(9660) & " " & FORMAT(_CurrentMileage / 1000, "0.0") & "K",
-    FORMAT(_CurrentMileage / 1000, "0.0") & "K"
+### 3. Active Critical Maintenance Alerts
+```dax
+Critical Alerts = 
+COALESCE(
+    CALCULATE(COUNTROWS(ev_telemetry_dataset), ev_telemetry_dataset[Diagnostic_Risk_Tier] = "Critical"),
+    0
 )
 ```
 
-### 4. Measure: Dynamic 3D Component Image Selector
+### 4. Dynamic 3D Component Image Selector
 ```dax
 Selected Component Image = 
 CALCULATE(
     SELECTEDVALUE('Image Datasets'[Image URL]),
     TREATAS(VALUES(component[Component]), 'Image Datasets'[Component]),
     TREATAS(VALUES(condition[Component_Condition]), 'Image Datasets'[Component_Condition])
+)
+```
+
+### 5. Vehicle Mileage Lifecycle Cohort (Calculated Column)
+```dax
+Mileage Group = 
+SWITCH(
+    TRUE(),
+    ev_telemetry_dataset[Mileage_km] <= 35000, "0–35K km",
+    ev_telemetry_dataset[Mileage_km] <= 75000, "35K–75K km",
+    ev_telemetry_dataset[Mileage_km] <= 115000, "75K–115K km",
+    ev_telemetry_dataset[Mileage_km] <= 150000, "115K–150K km",
+    "150K+ km"
 )
 ```
 
@@ -188,42 +215,50 @@ CALCULATE(
 ```plaintext
 EV Health and Telemetry Analysis Dashboard/
 │
-├── .gitignore                                 # Git rules for Power BI & Windows cache files
-├── Background Viz.png                         # High-res automotive telemetry UI container canvas
+├── .gitignore                                 # Git exclusions for Power BI & Windows cache files
+├── Background Viz.png                         # High-resolution automotive telemetry UI container
 ├── component.csv                              # Component dimension with cloud icon URLs
-├── condition.csv                              # Component condition dimension (Optimal, Degraded)
+├── condition.csv                              # Operational state dimension (Optimal, Degraded)
+├── dashboard_preview.png                      # High-res screenshot of the completed dashboard
 ├── ev_telemetry_dataset.csv                   # Primary telemetry dataset (2,500 fleet vehicles)
-├── Image Datasets.csv                         # 3D image path repository (10 visual states)
+├── Image Datasets.csv                         # 3D image path repository (10 visual twin states)
 ├── LICENSE                                    # MIT Open-Source License
-├── Measures and Columns Formula.txt          # DAX measures & calculated column references
+├── Measures and Columns Formula.txt          # Complete DAX formulas reference guide
 ├── README.md                                  # Executive documentation & technical guide
 │
-└── images/                                    # 3D High-Resolution Component Renders
-    ├── battery_degraded.jpg                   # Thermal runaway damaged battery pack
+├── EV Health and Telemetry Analysis.pbip      # Power BI Project root (native developer format)
+├── EV Health and Telemetry Analysis.Report/   # Report metadata (visuals, layouts, styling)
+│   ├── definition.pbir                        # Report definition link
+│   └── report.json                            # Visual container definitions and bindings
+├── EV Health and Telemetry Analysis.SemanticModel/ # Semantic data model (TMDL/BIM)
+│   ├── definition.pbism                       # Semantic model definition link
+│   └── model.bim                              # Data tables, relationships, DAX measures
+│
+└── images/                                    # 3D High-Resolution Component Twin Renders
     ├── battery_optimal.jpg                    # High-voltage pristine battery pack
-    ├── brakes_degraded.jpg                    # Warped thermal cracked brake disc
-    ├── brakes_optimal.jpg                     # High-performance carbon-ceramic brake
-    ├── chassis_degraded.jpg                   # Structural fatigue cracked EV chassis
+    ├── battery_degraded.jpg                   # Thermal runaway damaged battery pack
     ├── chassis_optimal.jpg                    # Pristine titanium skateboard chassis
-    ├── cooling_degraded.jpg                   # Ruptured coolant leak radiator unit
+    ├── chassis_degraded.jpg                   # Battery bay thermal overload chassis
+    ├── motor_optimal.jpg                      # Pristine permanent magnet EV motor
+    ├── motor_degraded.jpg                     # Overheated stator thermal damaged motor
+    ├── brakes_optimal.jpg                     # High-performance carbon-ceramic brake
+    ├── brakes_degraded.jpg                    # Friction-overheated glowing brake disc
     ├── cooling_optimal.jpg                    # Active fluid flow thermal chiller unit
-    ├── motor_degraded.jpg                     # Burnt stator thermal damaged EV motor
-    └── motor_optimal.jpg                      # Pristine permanent magnet EV motor
+    └── cooling_degraded.jpg                   # Boiling thermal overload cooling unit
 ```
 
 ---
 
 ## 🚀 Setup & Exploration Guide
 
-1. Open **Microsoft Power BI Desktop**.
-2. Click **Get Data > Text/CSV** and load:
-   - `ev_telemetry_dataset.csv`
-   - `component.csv`
-   - `condition.csv`
-   - `Image Datasets.csv`
-3. Navigate to **Model View** and verify the 1-to-many relationships matching the architecture diagram above.
-4. Set the canvas background to **`Background Viz.png`** (Image fit: *Fit* or *Fill*, 0% transparency).
-5. Add the DAX measures from `Measures and Columns Formula.txt` for dynamic variance tracking and 3D visual binding!
+### Quick Start with Power BI Desktop
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/aakash1552005/smoking-health-risk-analysis-dashboard.git
+   ```
+2. Double-click **`EV Health and Telemetry Analysis.pbip`** to open the project directly in **Power BI Desktop** (September 2023 release or newer).
+3. The dataset, relationships, measures, and visual containers load automatically with zero manual setup.
+4. Interact with the **Component ribbon** and **Optimal / Degraded toggle** to explore dynamic 3D telemetry visualization.
 
 ---
 
@@ -232,3 +267,9 @@ EV Health and Telemetry Analysis Dashboard/
 **Aakash S. S.**  
 *Automotive Telemetry Analytics & Power BI Data Intelligence*  
 - GitHub: [@aakash1552005](https://github.com/aakash1552005)
+
+---
+
+<div align="center">
+  <sub>Built with Microsoft Power BI Desktop, DAX, and 3D Digital Twin Engineering Renders. Released under the MIT License.</sub>
+</div>
