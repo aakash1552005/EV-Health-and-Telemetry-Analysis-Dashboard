@@ -155,7 +155,7 @@
           {
             "name": "Mileage Group",
             "dataType": "string",
-            "expression": "SWITCH(TRUE(), ev_telemetry_dataset[Mileage_km] <= 35000, \"0\u201335K km\", ev_telemetry_dataset[Mileage_km] <= 75000, \"35K\u201375K km\", ev_telemetry_dataset[Mileage_km] <= 115000, \"75K\u2013115K km\", ev_telemetry_dataset[Mileage_km] <= 150000, \"115K\u2013150K km\", \"150K+ km\")",
+            "expression": "SWITCH(TRUE(), ev_telemetry_dataset[Mileage_km] <= 35000, \"0–35K km\", ev_telemetry_dataset[Mileage_km] <= 75000, \"35K–75K km\", ev_telemetry_dataset[Mileage_km] <= 115000, \"75K–115K km\", ev_telemetry_dataset[Mileage_km] <= 150000, \"115K–150K km\", \"150K+ km\")",
             "isDataTypeInferred": true,
             "lineageTag": "ecf85b0d-1d5d-476d-85c8-131dee9b5cea",
             "type": "calculated"

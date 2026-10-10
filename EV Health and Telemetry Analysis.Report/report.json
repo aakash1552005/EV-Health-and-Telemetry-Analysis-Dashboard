@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\": \"5.68\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY24SU02\", \"type\": 2, \"version\": {\"visual\": \"1.8.91\", \"report\": \"2.0.91\", \"page\": \"1.3.91\"}}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"linguisticSchemaSyncVersion\": 2, \"settings\": {\"useNewFilterPaneExperience\": true, \"allowChangeFilterTypes\": true, \"useStylableVisualContainerHeader\": true, \"queryLimitOption\": 6, \"exportDataMode\": 1, \"useEnhancedTooltips\": false}, \"objects\": {\"outspacePane\": [{\"properties\": {\"expanded\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.68\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"type\":2,\"version\":{\"visual\":\"1.8.91\",\"report\":\"2.0.91\",\"page\":\"1.3.91\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useEnhancedTooltips\":false},\"objects\":{\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -33,114 +33,114 @@
   ],
   "sections": [
     {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Background Viz.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Background_Viz42649341394758633.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fit'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
       "displayName": "EV Telemetry & Powertrain Health",
       "displayOption": 0,
       "filters": "[]",
-      "height": 720.0,
+      "height": 720.00,
       "name": "ReportSection_EVTelemetry",
-      "width": 1280.0,
-      "config": "{\"objects\": {\"background\": [{\"properties\": {\"image\": {\"image\": {\"name\": {\"expr\": {\"Literal\": {\"Value\": \"'Background Viz.png'\"}}}, \"url\": {\"expr\": {\"ResourcePackageItem\": {\"PackageName\": \"RegisteredResources\", \"PackageType\": 1, \"ItemName\": \"Background_Viz42649341394758633.png\"}}}, \"scaling\": {\"expr\": {\"Literal\": {\"Value\": \"'Fit'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}",
       "visualContainers": [
         {
-          "x": 55.0,
-          "y": 24.0,
-          "width": 850.0,
-          "height": 45.0,
-          "z": 0.0,
+          "config": "{\"name\":\"ConditionSlicer\",\"layouts\":[{\"id\":0,\"position\":{\"x\":955,\"y\":24,\"z\":1000,\"width\":270,\"height\":45,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"condition.Component_Condition\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"condition\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Component_Condition\"},\"Name\":\"condition.Component_Condition\"}]},\"objects\":{\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"condition\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Component_Condition\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Degraded'\"}}]]}}}]}}}}],\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"TitleTextBox\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 55, \"y\": 24, \"z\": 0, \"width\": 850, \"height\": 45, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"\\u26a1 EV FLEET TELEMETRY & POWERTRAIN HEALTH\", \"textStyle\": {\"fontWeight\": \"bold\", \"fontFamily\": \"Segoe UI\", \"fontSize\": \"20pt\", \"color\": \"#0F172A\"}}]}]}}]}}}"
+          "height": 45.00,
+          "width": 270.00,
+          "x": 955.00,
+          "y": 24.00,
+          "z": 1000.00
         },
         {
-          "x": 955.0,
-          "y": 24.0,
-          "width": 270.0,
-          "height": 45.0,
-          "z": 1000.0,
+          "config": "{\"name\":\"Hero3DComponentImage\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50,\"y\":270,\"z\":8000,\"width\":460,\"height\":420,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceType\":{\"expr\":{\"Literal\":{\"Value\":\"'imageData'\"}}},\"sourceField\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Image Datasets\"}},\"Property\":\"Image URL\"}},\"Function\":3}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"ConditionSlicer\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 955, \"y\": 24, \"z\": 1000, \"width\": 270, \"height\": 45, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"condition.Component_Condition\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"condition\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Component_Condition\"}, \"Name\": \"condition.Component_Condition\"}]}, \"objects\": {\"general\": [{\"properties\": {\"orientation\": {\"expr\": {\"Literal\": {\"Value\": \"1D\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 420.00,
+          "width": 460.00,
+          "x": 50.00,
+          "y": 270.00,
+          "z": 8000.00
         },
         {
-          "x": 45.0,
-          "y": 92.0,
-          "width": 280.0,
-          "height": 72.0,
-          "z": 2000.0,
+          "config": "{\"name\":\"HorizontalComponentSlicer\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50,\"y\":192,\"z\":10000,\"width\":1180,\"height\":48,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"component.Component\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"component\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Component\"},\"Name\":\"component.Component\"}]},\"objects\":{\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"component\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Component\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Regenerative Brakes'\"}}]]}}}]}}}}],\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"KpiTotalFleet\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 45.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 2000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Total Vehicles\"}, \"Name\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 48.00,
+          "width": 1180.00,
+          "x": 50.00,
+          "y": 192.00,
+          "z": 10000.00
         },
         {
-          "x": 345.0,
-          "y": 92.0,
-          "width": 280.0,
-          "height": 72.0,
-          "z": 2000.0,
+          "config": "{\"name\":\"KpiBatterySoH\",\"layouts\":[{\"id\":0,\"position\":{\"x\":345,\"y\":92,\"z\":3000,\"width\":280,\"height\":72,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Fields\":[{\"queryRef\":\"ev_telemetry_dataset.vs Avg SoH\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"vs Avg SoH\"},\"Name\":\"ev_telemetry_dataset.vs Avg SoH\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"KpiBatterySoH\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 345.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 3000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"vs Avg SoH\"}, \"Name\": \"ev_telemetry_dataset.vs Avg SoH\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 72.00,
+          "width": 280.00,
+          "x": 345.00,
+          "y": 92.00,
+          "z": 3000.00
         },
         {
-          "x": 645.0,
-          "y": 92.0,
-          "width": 280.0,
-          "height": 72.0,
-          "z": 2000.0,
+          "config": "{\"name\":\"KpiCriticalAlerts\",\"layouts\":[{\"id\":0,\"position\":{\"x\":945,\"y\":92,\"z\":5000,\"width\":290,\"height\":72,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Fields\":[{\"queryRef\":\"ev_telemetry_dataset.Critical Alerts\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Critical Alerts\"},\"Name\":\"ev_telemetry_dataset.Critical Alerts\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"KpiEfficiency\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645.0, \"y\": 92, \"z\": 2000, \"width\": 280.0, \"height\": 72, \"tabOrder\": 4000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Avg Efficiency\"}, \"Name\": \"ev_telemetry_dataset.Avg Efficiency\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 72.00,
+          "width": 290.00,
+          "x": 945.00,
+          "y": 92.00,
+          "z": 5000.00
         },
         {
-          "x": 945.0,
-          "y": 92.0,
-          "width": 290.0,
-          "height": 72.0,
-          "z": 2000.0,
+          "config": "{\"name\":\"KpiEfficiency\",\"layouts\":[{\"id\":0,\"position\":{\"x\":645,\"y\":92,\"z\":4000,\"width\":280,\"height\":72,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Fields\":[{\"queryRef\":\"ev_telemetry_dataset.Avg Efficiency\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Avg Efficiency\"},\"Name\":\"ev_telemetry_dataset.Avg Efficiency\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"KpiCriticalAlerts\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 945.0, \"y\": 92, \"z\": 2000, \"width\": 290.0, \"height\": 72, \"tabOrder\": 5000}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Fields\": [{\"queryRef\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Critical Alerts\"}, \"Name\": \"ev_telemetry_dataset.Critical Alerts\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 72.00,
+          "width": 280.00,
+          "x": 645.00,
+          "y": 92.00,
+          "z": 4000.00
         },
         {
-          "x": 50.0,
-          "y": 192.0,
-          "width": 1180.0,
-          "height": 48.0,
-          "z": 8000.0,
+          "config": "{\"name\":\"KpiTotalFleet\",\"layouts\":[{\"id\":0,\"position\":{\"x\":45,\"y\":92,\"z\":2000,\"width\":280,\"height\":72,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Fields\":[{\"queryRef\":\"ev_telemetry_dataset.Total Vehicles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Total Vehicles\"},\"Name\":\"ev_telemetry_dataset.Total Vehicles\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"HorizontalComponentSlicer\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 50, \"y\": 192, \"z\": 8000, \"width\": 1180, \"height\": 48, \"tabOrder\": 6000}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"component.Component\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"c\", \"Entity\": \"component\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"c\"}}, \"Property\": \"Component\"}, \"Name\": \"component.Component\"}]}, \"objects\": {\"general\": [{\"properties\": {\"orientation\": {\"expr\": {\"Literal\": {\"Value\": \"1D\"}}}}}], \"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Basic'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 72.00,
+          "width": 280.00,
+          "x": 45.00,
+          "y": 92.00,
+          "z": 2000.00
         },
         {
-          "x": 50.0,
-          "y": 270.0,
-          "width": 460.0,
-          "height": 420.0,
-          "z": 5000.0,
+          "config": "{\"name\":\"MotorTorqueBarChart\",\"layouts\":[{\"id\":0,\"position\":{\"x\":550,\"y\":270,\"z\":6000,\"width\":320,\"height\":190,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ev_telemetry_dataset.Vehicle_Model\",\"active\":true}],\"Y\":[{\"queryRef\":\"ev_telemetry_dataset.Avg Torque\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Vehicle_Model\"},\"Name\":\"ev_telemetry_dataset.Vehicle_Model\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Avg Torque\"},\"Name\":\"ev_telemetry_dataset.Avg Torque\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"Hero3DComponentImage\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 50, \"y\": 270, \"z\": 5000, \"width\": 460, \"height\": 420, \"tabOrder\": 7000}}], \"singleVisual\": {\"visualType\": \"image\", \"drillFilterOtherVisuals\": true, \"objects\": {\"image\": [{\"properties\": {\"sourceType\": {\"expr\": {\"Literal\": {\"Value\": \"'imageData'\"}}}, \"sourceField\": {\"expr\": {\"Aggregation\": {\"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"Image Datasets\"}}, \"Property\": \"Image URL\"}}, \"Function\": 3}}}}}]}}}"
+          "height": 190.00,
+          "width": 320.00,
+          "x": 550.00,
+          "y": 270.00,
+          "z": 6000.00
         },
         {
-          "x": 550.0,
-          "y": 270.0,
-          "width": 320.0,
-          "height": 190.0,
-          "z": 4000.0,
+          "config": "{\"name\":\"RiskTierByOperatorStackedColumn\",\"layouts\":[{\"id\":0,\"position\":{\"x\":550,\"y\":495,\"z\":9000,\"width\":680,\"height\":195,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ev_telemetry_dataset.Fleet_Operator\",\"active\":true}],\"Series\":[{\"queryRef\":\"ev_telemetry_dataset.Diagnostic_Risk_Tier\"}],\"Y\":[{\"queryRef\":\"ev_telemetry_dataset.Total Vehicles\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Fleet_Operator\"},\"Name\":\"ev_telemetry_dataset.Fleet_Operator\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Diagnostic_Risk_Tier\"},\"Name\":\"ev_telemetry_dataset.Diagnostic_Risk_Tier\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Total Vehicles\"},\"Name\":\"ev_telemetry_dataset.Total Vehicles\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Fleet_Operator\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Diagnostic_Risk_Tier\"}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"MotorTorqueBarChart\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 550, \"y\": 270, \"z\": 4000, \"width\": 320, \"height\": 190, \"tabOrder\": 8000}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"ev_telemetry_dataset.Vehicle_Model\", \"active\": true}], \"Y\": [{\"queryRef\": \"ev_telemetry_dataset.Avg Torque\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Vehicle_Model\"}, \"Name\": \"ev_telemetry_dataset.Vehicle_Model\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Avg Torque\"}, \"Name\": \"ev_telemetry_dataset.Avg Torque\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 195.00,
+          "width": 680.00,
+          "x": 550.00,
+          "y": 495.00,
+          "z": 9000.00
         },
         {
-          "x": 910.0,
-          "y": 270.0,
-          "width": 320.0,
-          "height": 190.0,
-          "z": 4000.0,
+          "config": "{\"name\":\"ThermalProfileLineChart\",\"layouts\":[{\"id\":0,\"position\":{\"x\":910,\"y\":270,\"z\":7000,\"width\":320,\"height\":190,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ev_telemetry_dataset.Mileage Group\",\"active\":true}],\"Y\":[{\"queryRef\":\"ev_telemetry_dataset.Avg Core Temp\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ev_telemetry_dataset\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Mileage Group\"},\"Name\":\"ev_telemetry_dataset.Mileage Group\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Avg Core Temp\"},\"Name\":\"ev_telemetry_dataset.Avg Core Temp\"}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"ThermalProfileLineChart\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 910, \"y\": 270, \"z\": 4000, \"width\": 320, \"height\": 190, \"tabOrder\": 9000}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"ev_telemetry_dataset.Mileage Group\", \"active\": true}], \"Y\": [{\"queryRef\": \"ev_telemetry_dataset.Avg Core Temp\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Mileage Group\"}, \"Name\": \"ev_telemetry_dataset.Mileage Group\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Avg Core Temp\"}, \"Name\": \"ev_telemetry_dataset.Avg Core Temp\"}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 190.00,
+          "width": 320.00,
+          "x": 910.00,
+          "y": 270.00,
+          "z": 7000.00
         },
         {
-          "x": 550.0,
-          "y": 495.0,
-          "width": 680.0,
-          "height": 195.0,
-          "z": 7000.0,
+          "config": "{\"name\":\"TitleTextBox\",\"layouts\":[{\"id\":0,\"position\":{\"x\":55,\"y\":24,\"z\":0,\"width\":850,\"height\":45,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"⚡ EV FLEET TELEMETRY & POWERTRAIN HEALTH\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Segoe UI\",\"fontSize\":\"20pt\",\"color\":\"#0F172A\"}}]}]}}]}}}",
           "filters": "[]",
-          "config": "{\"name\": \"RiskTierByOperatorStackedColumn\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 550, \"y\": 495, \"z\": 7000, \"width\": 680, \"height\": 195, \"tabOrder\": 10000}}], \"singleVisual\": {\"visualType\": \"hundredPercentStackedColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"ev_telemetry_dataset.Fleet_Operator\", \"active\": true}], \"Series\": [{\"queryRef\": \"ev_telemetry_dataset.Diagnostic_Risk_Tier\"}], \"Y\": [{\"queryRef\": \"ev_telemetry_dataset.Total Vehicles\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"ev_telemetry_dataset\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Fleet_Operator\"}, \"Name\": \"ev_telemetry_dataset.Fleet_Operator\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Diagnostic_Risk_Tier\"}, \"Name\": \"ev_telemetry_dataset.Diagnostic_Risk_Tier\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Total Vehicles\"}, \"Name\": \"ev_telemetry_dataset.Total Vehicles\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Fleet_Operator\"}}}, {\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Diagnostic_Risk_Tier\"}}}]}, \"vcObjects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}"
+          "height": 45.00,
+          "width": 850.00,
+          "x": 55.00,
+          "y": 24.00,
+          "z": 0.00
         }
-      ]
+      ],
+      "width": 1280.00
     }
   ]
 }
